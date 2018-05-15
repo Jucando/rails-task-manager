@@ -1,0 +1,8 @@
+<div class="title-edit">
+  <h1><%= @task.title %></h1>
+  <%= link_to "<i class='"'fas fa-edit'"'></i> Edit this task".html_safe, edit_task_path(@task.id), class: "btn btn-secondary" %>
+</div>
+<p class=task-details><%= @task.details %></p>
+<p><%= @task.completed ? "<i class='far fa-check-square'></i> This task is completed".html_safe : "<i class='far fa-square'></i> This task is not yet completed".html_safe %></p>
+<%= link_to "<i class='"'fas fa-undo-alt'"'></i> Back to list".html_safe, tasks_path %>
+
